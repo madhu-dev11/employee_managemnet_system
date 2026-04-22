@@ -1,6 +1,7 @@
 package net.javaguides.ems_backend.dto;
 
 
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -10,6 +11,7 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
+@JsonPropertyOrder({"id", "firstName", "lastName", "email"})
 public class EmployeeDto  {
 
     private Long id;

@@ -12,3 +12,9 @@
     
     color: white;
 }
+
+.btn-btn-info{ 
+    background-color: rgb(51, 137, 235);
+    border-radius:8px
+
+}

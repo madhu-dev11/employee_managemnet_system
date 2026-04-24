@@ -1,20 +1,226 @@
-.footer{
-    position:absolute;
-    bottom: 0;
-    width: 100%;
-    height: 30px;
-    background-color: aqua;
-    text-align: center;
-    color: white;
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #eef2f7, #dbe9ff);
+  font-family: 'Segoe UI', Arial, sans-serif;
 }
 
-.header{
-    
-    color: white;
+/* Glass Navbar */
+.navbar {
+  background: rgba(20, 20, 40, 0.9) !important;
+  backdrop-filter: blur(10px);
+  padding: 14px 20px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
 }
 
-.btn-btn-info{ 
-    background-color: rgb(51, 137, 235);
-    border-radius:8px
+.navbar-brand {
+  color: #fff !important;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
 
+/* Page container */
+.container {
+  margin-top: 40px;
+  margin-bottom: 80px;
+}
+
+/* Card (glass effect) */
+.card {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(12px);
+  border-radius: 16px;
+  border: none;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  padding: 20px;
+}
+
+/* Title */
+h2 {
+  font-weight: 700;
+  color: #1f2a44;
+  margin-bottom: 20px;
+}
+
+/* Table styling */
+table {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+table thead {
+  background: linear-gradient(90deg, #4f46e5, #3b82f6);
+  color: white;
+}
+
+table th, table td {
+  padding: 12px !important;
+}
+
+/* Buttons */
+.btn {
+  border-radius: 8px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.btn-primary {
+  background: linear-gradient(90deg, #4f46e5, #3b82f6);
+  border: none;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(79,70,229,0.4);
+}
+
+.btn-success {
+  background: linear-gradient(90deg, #22c55e, #16a34a);
+  border: none;
+}
+
+.btn-info {
+  background: linear-gradient(90deg, #06b6d4, #0ea5e9);
+  border: none;
+  color: white;
+}
+
+.btn:hover {
+  transform: scale(1.03);
+}
+
+/* Form inputs */
+.form-control {
+  border-radius: 10px;
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+.form-control:focus {
+  border-color: #4f46e5;
+  box-shadow: 0 0 8px rgba(79,70,229,0.3);
+}
+
+/* Footer */
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: rgba(20, 20, 40, 0.95);
+  color: white;
+  text-align: center;
+  padding: 10px;
+  backdrop-filter: blur(10px);
+}
+ /* =========================
+   PAGE LOAD ANIMATION
+========================= */
+
+body {
+  animation: fadeInPage 0.6s ease-in;
+}
+
+@keyframes fadeInPage {
+  from {
+    opacity: 0;
+    transform: scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* =========================
+   CARD ANIMATION
+========================= */
+
+.card {
+  animation: slideUp 0.5s ease-in-out;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================
+   TABLE ROW ANIMATION
+========================= */
+
+table tbody tr {
+  animation: fadeRow 0.4s ease-in;
+}
+
+@keyframes fadeRow {
+  from {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Add delay effect for rows */
+table tbody tr:nth-child(1) { animation-delay: 0.05s; }
+table tbody tr:nth-child(2) { animation-delay: 0.1s; }
+table tbody tr:nth-child(3) { animation-delay: 0.15s; }
+table tbody tr:nth-child(4) { animation-delay: 0.2s; }
+table tbody tr:nth-child(5) { animation-delay: 0.25s; }
+
+/* =========================
+   BUTTON ANIMATION
+========================= */
+
+.btn {
+  transition: all 0.25s ease-in-out;
+}
+
+.btn:hover {
+  transform: translateY(-3px) scale(1.02);
+}
+
+.btn:active {
+  transform: scale(0.96);
+}
+
+/* =========================
+   INPUT FOCUS ANIMATION
+========================= */
+
+.form-control {
+  transition: all 0.3s ease;
+}
+
+.form-control:focus {
+  transform: scale(1.02);
+}
+
+/* =========================
+   HEADER ANIMATION
+========================= */
+
+.navbar {
+  animation: dropDown 0.6s ease;
+}
+
+@keyframes dropDown {
+  from {
+    transform: translateY(-60px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }

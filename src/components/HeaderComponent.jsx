@@ -1,16 +1,17 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const HeaderComponent = () => {
   return (
-    <div className=''>
+    <div>
       <header>
-        <nav className='navbar bg-light border-bottom border-body'>
-            <a class="navbar-brand" href="">Employee Management System</a>
-
+        <nav className='navbar navbar-dark bg-dark px-3'>
+          <Link to="/" className="navbar-brand">
+            Employee Management System
+          </Link>
         </nav>
       </header>
     </div>
-    
   )
 }
 

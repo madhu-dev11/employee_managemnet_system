@@ -144,7 +144,7 @@ const EmployeeComponent = () => {
 
                         </form>
 
-                        {/* ✅ ADDED BUTTONS HERE */}
+                        
                         <button
                             className='btn btn-success'
                             onClick={saveOrUpdateEmployee}
